@@ -39,14 +39,10 @@ public class Darkness : MonoBehaviour
         BottomDark.transform.DOMoveY(0f, AnimationSpeed);
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            /*LeftDark.transform.DOMoveX(13f, 0f);
-            RightDark.transform.DOMoveX(-13f, 0f);
-            TopDark.transform.DOMoveY(0f, 0f);
-            BottomDark.transform.DOMoveY(0f, 0f);*/
             Debug.Log("Hey!");
             DarknessCollision = true;
         }

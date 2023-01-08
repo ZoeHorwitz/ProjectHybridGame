@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
-  - Open Door
+  - Player1
+  - Player2
+  - Reunite
   layers:
   - Default
   - TransparentFX
