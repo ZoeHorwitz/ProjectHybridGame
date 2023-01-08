@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class Darkness : MonoBehaviour
 {
@@ -10,27 +11,25 @@ public class Darkness : MonoBehaviour
     public GameObject TopDark;
     public GameObject BottomDark;
 
-    public float Speed;
+    private float Speed = 10000;
     private float AnimationSpeed;
 
     private bool DarknessCollision = false;
 
     private void Start()
     {
-        AnimationSpeed = Speed * Time.deltaTime;
-        
+        AnimationSpeed = Speed * 0.03f;
+        DarknessAnimation();
     }
+
     private void FixedUpdate()
     {
-        if(DarknessCollision = true)
+        if (DarknessCollision == true)
         {
-            DarknessAnimation();
-        }
-        else
-        {
-
+            SceneManager.LoadScene("Fanaar");
         }
     }
+
     public void DarknessAnimation()
     {
         LeftDark.transform.DOMoveX(0f, AnimationSpeed);
@@ -44,9 +43,12 @@ public class Darkness : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            LeftDark.transform.DOMoveX(13f, 0f);
+            /*LeftDark.transform.DOMoveX(13f, 0f);
             RightDark.transform.DOMoveX(-13f, 0f);
+            TopDark.transform.DOMoveY(0f, 0f);
+            BottomDark.transform.DOMoveY(0f, 0f);*/
             Debug.Log("Hey!");
+            DarknessCollision = true;
         }
     }
 }
