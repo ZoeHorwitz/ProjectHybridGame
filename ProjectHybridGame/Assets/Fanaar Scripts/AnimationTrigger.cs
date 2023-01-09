@@ -9,6 +9,11 @@ public class AnimationTrigger : MonoBehaviour
     public GameObject Dark3;
     public GameObject Dark4;
 
+    public GameObject Player1;
+    public GameObject Player2;
+
+    private bool Animate = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Reunite")
