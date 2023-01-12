@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Fanaar.unity
     guid: aa2acda6b0c5f644c9b19e88a63b9ad9
+  - enabled: 1
+    path: Assets/Scenes/Flin.unity
+    guid: c7d4834e786741b4bb265f8c35facbb8
   m_configObjects: {}
