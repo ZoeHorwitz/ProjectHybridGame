@@ -9,20 +9,26 @@ public class AnimationTrigger : MonoBehaviour
     public GameObject Dark3;
     public GameObject Dark4;
 
-    public GameObject Player1;
-    public GameObject Player2;
-
-    private bool Animate = false;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public Animator Anim;
+    private void Start()
     {
-        if(collision.gameObject.tag == "Reunite")
+        Anim = GetComponent<Animator>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Player")
         {
             Dark1.SetActive(false);
             Dark2.SetActive(false);
             Dark3.SetActive(false);
             Dark4.SetActive(false);
-            Debug.Log("Animation!");
+
+            Debug.Log("Test!");
+
+            Anim.Play("Darkness_Fade_Out");
         }
+
+        //if(Anim.Play("Darkness_Fade_Out"))
     }
 }
