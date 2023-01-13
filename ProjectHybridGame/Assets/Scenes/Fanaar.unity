@@ -3467,7 +3467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9b55be4b587724fa1ca7ac8807fdd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 200
+  moveSpeed: 700
   rigidbody: {fileID: 1042097180}
 --- !u!58 &1042097184
 CircleCollider2D:
@@ -15557,7 +15557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e450a37275dffe44a8cf2a0eba4c2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 200
+  moveSpeed: 700
   rigidbody: {fileID: 1828680792}
 --- !u!58 &1828680796
 CircleCollider2D:
