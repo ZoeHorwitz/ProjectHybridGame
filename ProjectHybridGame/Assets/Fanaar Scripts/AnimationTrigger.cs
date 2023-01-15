@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.Animations;
 
 public class AnimationTrigger : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class AnimationTrigger : MonoBehaviour
     public GameObject Dark3;
     public GameObject Dark4;
 
-    public Animator Anim;
+    public GameObject Light;
+
+    //public Animation Anim;
     private void Start()
     {
-        Anim = GetComponent<Animator>();
+        //Anim = GetComponent<Animation>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -26,7 +29,9 @@ public class AnimationTrigger : MonoBehaviour
 
             Debug.Log("Test!");
 
-            Anim.Play("Darkness_Fade_Out");
+            Light.SetActive(true);
+
+            //Anim.Play("Darkness_Fade_Out");
         }
 
         //if(Anim.Play("Darkness_Fade_Out"))
