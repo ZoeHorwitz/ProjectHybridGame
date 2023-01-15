@@ -5,13 +5,14 @@ using UnityEngine;
 public class TriggerTwo : MonoBehaviour
 {
     public GameObject Door2;
-
+    public AudioSource Doors;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             Door2.SetActive(false);
             Debug.Log("Test!");
+            Doors.Play();
         }
     }
 }
