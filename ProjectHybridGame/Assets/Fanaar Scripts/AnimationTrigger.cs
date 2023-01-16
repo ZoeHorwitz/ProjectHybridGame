@@ -11,8 +11,7 @@ public class AnimationTrigger : MonoBehaviour
     public GameObject Dark4;
 
     public GameObject Light;
-
-    //public Animation Anim;
+    public AudioSource Magical;
     private void Start()
     {
         //Anim = GetComponent<Animation>();
@@ -30,6 +29,7 @@ public class AnimationTrigger : MonoBehaviour
             Debug.Log("Test!");
 
             Light.SetActive(true);
+            Magical.Play();
 
             //Anim.Play("Darkness_Fade_Out");
         }
